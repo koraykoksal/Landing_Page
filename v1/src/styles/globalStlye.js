@@ -21,4 +21,7 @@ export const homePageStyle = {
   paddingTop: '80px',
 }
 
+export const fontStyle={
+  catamaran:"Catamaran"
+}
 
