@@ -1,0 +1,24 @@
+{
+    "text": {
+        "txt1": " Gastronomiye olan tutkumuzla, en kaliteli, şık ve benzersiz tasarımları sektör profesyonellerinin beğenisine sunuyoruz.",
+        "txt2": " Sizinle iş birliği yapmayı heyecanla bekliyoruz."
+    },
+    "muiElements": {
+        "nameSurname": "İsim, Soy isim",
+        "mail": "E-Mail",
+        "phone": "Telefon",
+        "country": "Ülke",
+        "job": "Meslek",
+        "company": "Şirket İsmi",
+        "btnText": "Benimle İletişime Geçin",
+        "GDPR": " KVKK politikasını okudum ve kabul ediyorum.",
+        "subscription": "Kampanyalardan haberdar olmak için elektronik iletileri almayı kabul ediyorum."
+    },
+    "jobs": {
+        "businessowner": "İşletme Sahibi",
+        "chef": "Şef",
+        "f&b": "F&B",
+        "architect": "Mimar",
+        "other": "Diğer"
+    }
+}

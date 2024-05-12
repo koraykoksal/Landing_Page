@@ -110,8 +110,8 @@ export const Home = () => {
               image={landingImg}
               loading='lazy'
               sx={{
-                objectFit: 'fill',
-                height: '100%',
+                objectFit: 'contain',
+                height: '100vh',
                 width: {
                   xs: '100%',
                   sm: '100%',
