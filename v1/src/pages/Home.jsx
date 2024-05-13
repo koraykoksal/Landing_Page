@@ -7,7 +7,7 @@ import { CiBoxList } from "react-icons/ci";
 import Characters from '../components/modal/Characters'
 import Badge from '@mui/material/Badge';
 import Content from '../components/Content'
-import landingImg from "../assets/img/landingImg.avif"
+import landingImg from "../assets/img/landingImg.png"
 import bonnaLogo from "../assets/img/logobonna_b.png"
 import { countryInfo, jobType } from '../helper/data'
 import { useTranslation } from 'react-i18next';
@@ -110,15 +110,16 @@ export const Home = () => {
               image={landingImg}
               loading='lazy'
               sx={{
-                objectFit: 'contain',
-                height: '100vh',
-                width: {
-                  xs: '100%',
-                  sm: '100%',
-                  md: '100%',
-                  lg: '100%',
-                  xl: '100%'
-                }
+                objectFit: 'cover',
+                height: '100%',
+                width:'100%'
+                // width: {
+                //   xs: '100%',
+                //   sm: '100%',
+                //   md: '100%',
+                //   lg: '100%',
+                //   xl: '100%'
+                // }
               }}
             />
           </Box>
@@ -145,11 +146,11 @@ export const Home = () => {
               sx={{
                 margin: 'auto',
                 width: {
-                  xs: '80px',
-                  sm: '100px',
-                  md: '150px',
+                  xs: '130px',
+                  sm: '150px',
+                  md: '170px',
                   lg: '200px',
-                  xl: '250px'
+                  xl: '220px'
                 }
               }}
             />
