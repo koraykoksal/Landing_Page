@@ -1,5 +1,5 @@
 import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
-import rickAndMortySliceReducer from '../features/rickAndMortySlice'
+import autReducer from '../features/authSlice'
 import { persistStore, persistReducer } from 'redux-persist'
 import storage from 'redux-persist/lib/storage' // defaults to localStorage for web
 
@@ -9,13 +9,13 @@ const persistConfig = {
   storage,
 }
 
-const persistedReducer = persistReducer(persistConfig, rickAndMortySliceReducer)
+const persistedReducer = persistReducer(persistConfig, autReducer)
 
 //store created
 export const store = configureStore({
 
   reducer: {
-    rickandmorty: persistedReducer,
+    auth: persistedReducer,
   },
 
 

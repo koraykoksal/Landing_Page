@@ -1,7 +1,8 @@
-
+import pattern1 from "../assets/img/pattern1.jpg"
 
 
 export const colors = {
+  beyaz:'#ffffff',
   mavi: '#141893',
   yesil: '#588247',
   kırmızı: '#fd0019',
@@ -23,5 +24,15 @@ export const homePageStyle = {
 
 export const fontStyle={
   catamaran:"Catamaran"
+}
+
+export const loginPageStyle={
+  width: "100%",
+  height: "100vh",
+  overflow:'auto',
+  backgroundImage: `url(${pattern1})`,
+  backgroundPosition: "center",
+  backgroundSize: "cover",
+  backgroundRepeat: "no-repeat",
 }
 

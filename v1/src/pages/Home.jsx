@@ -1,17 +1,14 @@
 import { Autocomplete, InputAdornment, Chip, Box, Button, Card, CardContent, CardMedia, Container, FormControl, Modal, Select, TextField, Typography, InputLabel, MenuItem, Grid, Paper, FormControlLabel, Checkbox } from '@mui/material'
 import React from 'react'
-import { useState, useEffect, useCallback } from 'react'
-import { format } from "date-fns"
+import { useState, useEffect } from 'react'
 import { fontStyle, homePageStyle, modalStyles } from '../styles/globalStlye'
-import { CiBoxList } from "react-icons/ci";
-import Characters from '../components/modal/Characters'
-import Badge from '@mui/material/Badge';
-import Content from '../components/Content'
 import landingImg from "../assets/img/landingImg.png"
 import bonnaLogo from "../assets/img/logobonna_b.png"
 import { countryInfo, jobType } from '../helper/data'
 import { useTranslation } from 'react-i18next';
 import GDPR from "../assets/docs/GDPR.pdf"
+
+
 
 export const Home = () => {
 
@@ -91,15 +88,24 @@ export const Home = () => {
 
   //! sayfa render olduğu zaman kullanıcının tarayıcı dil bilgisi alınır
   useEffect(() => {
-    const computerLanguage = navigator.language.split('-')[0] // "en-US" gibi bir değeri "en" yapar
-    computerLanguage == 'en' || 'tr' || 'es' || 'it' || 'fr' ? changeLang(computerLanguage) : changeLang('en')
+    // const computerLanguage = navigator.language.split('-')[0] // "en-US" gibi bir değeri "en" yapar
+    // computerLanguage == 'en' || 'tr' || 'es' || 'it' || 'fr' ? changeLang(computerLanguage) : changeLang('en')
+
+    const supportedLanguages = ['en', 'tr', 'es', 'it', 'fr'];
+    const computerLanguage = navigator.language.split('-')[0];
+    if (supportedLanguages.includes(computerLanguage)) {
+      changeLang(computerLanguage);
+    } 
+    else {
+      changeLang('en');
+    }
 
   }, [])
-
 
   return (
 
     <div>
+
 
       <Grid container spacing={0} sx={{ minHeight: '100vh' }}>
         {/* Resim Kolonu */}
@@ -112,14 +118,7 @@ export const Home = () => {
               sx={{
                 objectFit: 'cover',
                 height: '100%',
-                width:'100%'
-                // width: {
-                //   xs: '100%',
-                //   sm: '100%',
-                //   md: '100%',
-                //   lg: '100%',
-                //   xl: '100%'
-                // }
+                width: '100%'
               }}
             />
           </Box>
@@ -454,6 +453,8 @@ export const Home = () => {
           </Container>
         </Grid>
       </Grid>
+
+
 
     </div>
 
