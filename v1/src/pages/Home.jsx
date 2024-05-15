@@ -450,7 +450,7 @@ export const Home = () => {
 
             <Button
               variant='contained'
-              sx={{ backgroundColor: 'black', fontFamily: 'Catamaran', letterSpacing: 2, '&:hover': { backgroundColor: 'black' } }}
+              sx={{ backgroundColor: 'black', fontFamily: 'Catamaran', letterSpacing: 2, textTransform:'none','&:hover': { backgroundColor: 'black' } }}
               type='submit'
             >
               {t('muiElements.btnText')}
