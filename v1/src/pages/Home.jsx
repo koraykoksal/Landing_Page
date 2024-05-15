@@ -8,7 +8,7 @@ import { countryInfo, jobType } from '../helper/data'
 import { useTranslation } from 'react-i18next';
 import GDPR from "../assets/docs/GDPR.pdf"
 import useAuthCall from '../hooks/useAuthCall'
-import {format} from "date-fns"
+import { format } from "date-fns"
 
 
 export const Home = () => {
@@ -31,7 +31,7 @@ export const Home = () => {
     tel: "",
     emessage: false,
     policy: false,
-    datetime:format(currentDate,'yyyy-MM-dd HH:mm')
+    datetime: format(currentDate, 'yyyy-MM-dd HH:mm')
   })
 
   //onChange işlemi yap
@@ -413,18 +413,21 @@ export const Home = () => {
                     <Checkbox required name="gilad" onChange={(e) => handleIsCheck(e, 'policy')} />
                   }
                   label={
-                    <FormLabel style={{ fontFamily: `${fontStyle.catamaran}`, fontSize: 13 }}> {t('muiElements.GDPR')}</FormLabel>
+                    <FormLabel style={{ fontFamily: `${fontStyle.catamaran}`, fontSize: 13 }}>
+                      <span
+                      style={{textDecoration:'underline',marginRight:5,fontWeight:700,cursor: 'pointer'}}
+                        onClick={() => {
+                          window.open(`${GDPR}`, '_blank')
+                        }}
+                      >
+                        Click
+                      </span>
+
+                      {t('muiElements.GDPR')}
+                    </FormLabel>
                   }
 
                 />
-
-                <Typography
-                  variant='subtitle2'
-                  sx={{ fontFamily: fontStyle.catamaran, textDecoration: 'underline', cursor: 'pointer', fontSize: 13 }}
-                  onClick={() => { window.open(`${GDPR}`, '_blank') }}
-                >
-                  Click
-                </Typography>
 
               </Grid>
 
