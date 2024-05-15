@@ -1,4 +1,5 @@
 import pattern1 from "../assets/img/pattern1.jpg"
+import thanks from "../assets/img/TesukkurImg.png"
 
 
 export const colors = {
@@ -30,7 +31,17 @@ export const loginPageStyle={
   width: "100%",
   height: "100vh",
   overflow:'auto',
-  backgroundImage: `url(${pattern1})`,
+  backgroundColor:'#1D232B',
+  // backgroundImage: `url(${pattern1})`,
+  // backgroundPosition: "center",
+  // backgroundSize: "cover",
+  // backgroundRepeat: "no-repeat",
+}
+export const thanksPageStyle={
+  width: "100%",
+  height: "100vh",
+  overflow:'auto',
+  backgroundImage: `url(${thanks})`,
   backgroundPosition: "center",
   backgroundSize: "cover",
   backgroundRepeat: "no-repeat",

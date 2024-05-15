@@ -1,7 +1,9 @@
 {
     "text": {
         "txt1":"Con la nostra passione per la gastronomia, portiamo nel settore alimentare e delle bevande la qualità eccellente, l'eleganza e i design unici di Bonna.",
-        "txt2":"Siamo entusiasti di collaborare con voi."
+        "txt2":"Siamo entusiasti di collaborare con voi.",
+        "success":"Successo",
+        "back":"Tornare"
     },
     "muiElements":{
         "nameSurname":"Nome Cognone",

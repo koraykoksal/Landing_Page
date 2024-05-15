@@ -1,7 +1,9 @@
 {
     "text": {
         "txt1":"Con nuestra pasión por la gastronomía, aportamos la mejor calidad, elegancia y diseños únicos de Bonna al sector de la restauración.",
-        "txt2":"Estamos encantados de colaborar con usted."
+        "txt2":"Estamos encantados de colaborar con usted.",
+        "success":"Éxito",
+        "back":"Volver"
     },
     "muiElements":{
         "nameSurname":"Nombre Apellidos",

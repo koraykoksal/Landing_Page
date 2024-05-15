@@ -1,7 +1,9 @@
 {
     "text": {
         "txt1": " Gastronomiye olan tutkumuzla, en kaliteli, şık ve benzersiz tasarımları sektör profesyonellerinin beğenisine sunuyoruz.",
-        "txt2": " Sizinle iş birliği yapmayı heyecanla bekliyoruz."
+        "txt2": " Sizinle iş birliği yapmayı heyecanla bekliyoruz.",
+        "success":"Başarılı",
+        "back":"Geri"
     },
     "muiElements": {
         "nameSurname": "İsim, Soy isim",

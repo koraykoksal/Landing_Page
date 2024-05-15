@@ -7,6 +7,7 @@ import { CgSpinner } from 'react-icons/cg'
 import Report from '../pages/Report'
 import Login from '../pages/Login'
 import NavBar from '../components/NavBar'
+import Thanks from '../pages/Thanks'
 
 export const AppRouter = () => {
 
@@ -20,7 +21,7 @@ export const AppRouter = () => {
           <Routes>
             <Route index path='/' element={<Home />} />
             <Route path='login' element={<Login />} />
-
+            <Route path='thanks' element={<Thanks/>}/>
             <Route element={<PrivateRouter />}>
               <Route path='report' element={<Report />} />
             </Route>

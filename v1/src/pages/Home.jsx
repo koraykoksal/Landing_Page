@@ -1,4 +1,4 @@
-import { Autocomplete, InputAdornment, Chip, Box, Button, Card, CardContent, CardMedia, Container, FormControl, Modal, Select, TextField, Typography, InputLabel, MenuItem, Grid, Paper, FormControlLabel, Checkbox } from '@mui/material'
+import { Autocomplete, InputAdornment, Chip, Box, Button, Card, CardContent, CardMedia, Container, FormControl, Modal, Select, TextField, Typography, InputLabel, MenuItem, Grid, Paper, FormControlLabel, Checkbox, FormLabel } from '@mui/material'
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { fontStyle, homePageStyle, modalStyles } from '../styles/globalStlye'
@@ -7,17 +7,19 @@ import bonnaLogo from "../assets/img/logobonna_b.png"
 import { countryInfo, jobType } from '../helper/data'
 import { useTranslation } from 'react-i18next';
 import GDPR from "../assets/docs/GDPR.pdf"
-
+import useAuthCall from '../hooks/useAuthCall'
+import {format} from "date-fns"
 
 
 export const Home = () => {
 
   // dil çevirisi için kullanılan fonksiyon
   const { i18n, t } = useTranslation();
-
+  const { postFireDB } = useAuthCall()
   const [search, setSearch] = useState(null)
   const [phone, setPhone] = useState('');
   const [countryCode, setCountryCode] = useState('90');
+  const currentDate = new Date()
 
   const [info, setInfo] = useState({
     name: "",
@@ -27,6 +29,9 @@ export const Home = () => {
     email: "",
     jobtype: "",
     tel: "",
+    emessage: false,
+    policy: false,
+    datetime:format(currentDate,'yyyy-MM-dd HH:mm')
   })
 
   //onChange işlemi yap
@@ -95,12 +100,31 @@ export const Home = () => {
     const computerLanguage = navigator.language.split('-')[0];
     if (supportedLanguages.includes(computerLanguage)) {
       changeLang(computerLanguage);
-    } 
+    }
     else {
       changeLang('en');
     }
 
   }, [])
+
+
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    postFireDB("landing", info)
+    setInfo({
+      name: "",
+      country: "",
+      countryCode: "90",
+      company: "",
+      email: "",
+      jobtype: "",
+      tel: "",
+      emessage: false,
+      policy: false
+    })
+  }
+
 
   return (
 
@@ -136,6 +160,7 @@ export const Home = () => {
               minHeight: '100%',
             }}
             component={'form'}
+            onSubmit={handleSubmit}
           >
 
             <CardMedia
@@ -377,44 +402,32 @@ export const Home = () => {
               display: 'flex',
               flexDirection: 'column'
             }}>
-              <FormControlLabel
-                control={
-                  <Checkbox name="gilad" onChange={(e) => handleIsCheck(e, 'policy')} />
-                }
-                label={
-                  <Box
-                    sx={{
-                      display: 'flex',
-                      justifyContent: 'center',
-                      alignItems: 'center',
-                      gap: 1
-                    }}
-                  >
-                    <Typography
-                      variant='inherit'
-                      style={{ fontFamily: `${fontStyle.catamaran}`, fontSize: 14 }}
-                    >
-                      {t('muiElements.GDPR')}
-                    </Typography>
 
-                    {/* KVKK METNİ OKUMAK İÇİN TIKLA */}
-                    <Typography
-                      onClick={() => { window.open(`${GDPR}`, '_blank') }}
-                      variant='subtitle2'
-                      sx={{
-                        fontSize: 14,
-                        fontFamily: `${fontStyle.catamaran}`,
-                        fontWeight: 700,
-                        textDecoration: 'underline',
-                        cursor: 'pointer'
-                      }}
-                    >
-                      Click
-                    </Typography>
-                  </Box>
-                }
+              <Grid
+                sx={{ display: 'flex', justifyContent: 'start', alignItems: 'center', flexWrap: 'wrap' }}
+              >
 
-              />
+
+                <FormControlLabel
+                  control={
+                    <Checkbox required name="gilad" onChange={(e) => handleIsCheck(e, 'policy')} />
+                  }
+                  label={
+                    <FormLabel style={{ fontFamily: `${fontStyle.catamaran}`, fontSize: 13 }}> {t('muiElements.GDPR')}</FormLabel>
+                  }
+
+                />
+
+                <Typography
+                  variant='subtitle2'
+                  sx={{ fontFamily: fontStyle.catamaran, textDecoration: 'underline', cursor: 'pointer', fontSize: 13 }}
+                  onClick={() => { window.open(`${GDPR}`, '_blank') }}
+                >
+                  Click
+                </Typography>
+
+              </Grid>
+
 
               <FormControlLabel
                 name='emessage'
@@ -423,14 +436,12 @@ export const Home = () => {
                   <Checkbox name="gilad" onChange={(e) => handleIsCheck(e, 'emessage')} />
                 }
                 label={
-                  <Typography
-                    variant='inherit'
-                    style={{ fontFamily: `${fontStyle.catamaran}`, fontSize: 14 }}
-                  >
-                    {t('muiElements.subscription')}
-                  </Typography>}
+                  <FormLabel style={{ fontFamily: `${fontStyle.catamaran}`, fontSize: 13 }}> {t('muiElements.subscription')}</FormLabel>
+                  // <Typography style={{ fontFamily: `${fontStyle.catamaran}`, fontSize: 12 }}>{t('muiElements.subscription')}</Typography>
+                }
 
               />
+
             </Box>
 
 

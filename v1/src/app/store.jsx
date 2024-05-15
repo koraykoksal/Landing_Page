@@ -1,5 +1,6 @@
 import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
 import autReducer from '../features/authSlice'
+import landingRecuder from "../features/landingSlice"
 import { persistStore, persistReducer } from 'redux-persist'
 import storage from 'redux-persist/lib/storage' // defaults to localStorage for web
 
@@ -16,6 +17,7 @@ export const store = configureStore({
 
   reducer: {
     auth: persistedReducer,
+    landing:landingRecuder
   },
 
 

@@ -1,14 +1,17 @@
 import React from 'react'
-import {  Box, Button,Container, TextField, Typography} from '@mui/material'
+import { Box, Button, Container, TextField, Typography } from '@mui/material'
 import { useState, useEffect } from 'react'
 import lock from "../assets/img/lock.png"
 import { colors, loginPageStyle } from '../styles/globalStlye'
 import useAuthCall from '../hooks/useAuthCall'
+import { IoReturnUpBack } from "react-icons/io5";
+import { useNavigate } from 'react-router'
 
 
 const Login = () => {
 
     const { login } = useAuthCall()
+    const navigate=useNavigate()
 
     const [info, setInfo] = useState({
         email: "",
@@ -34,7 +37,7 @@ const Login = () => {
 
 
     return (
-        <div >
+        <div style={loginPageStyle}>
 
 
             <Box sx={{ p: 3, height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
@@ -121,7 +124,11 @@ const Login = () => {
                         }}
                     />
 
-                    <Button variant='contained' type='submit' sx={{ letterSpacing: 3 }}> OK </Button>
+                    <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 ,justifyContent:'center'}}>
+                        <Button variant='contained' type='submit' sx={{ letterSpacing: 3 }}> OK </Button>
+
+                        <IoReturnUpBack size={35} cursor={'pointer'} color='green' onClick={()=>navigate('/')}/>
+                    </Box>
 
                 </Container>
 

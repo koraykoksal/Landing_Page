@@ -1,7 +1,9 @@
 {
     "text": {
         "txt1":"With our passion for gastronomy, we offer the highest quality, stylish and unique designs to the taste of industry professionals.",
-        "txt2":"We look forward to collaborating with you."
+        "txt2":"We look forward to collaborating with you.",
+        "success":"Success",
+        "back":"Back"
     },
     "muiElements":{
         "nameSurname":"Name Surname",
