@@ -11,7 +11,8 @@ export const colors = {
   cardBorder: '#45474B',
   boxBorder: '#B4B4B8',
   navbarBgColor: '#F5F5FF',
-  homePageBgColor: '#F5F5FF'
+  homePageBgColor: '#F5F5FF',
+  bonna:'#D4B69C'
 }
 
 

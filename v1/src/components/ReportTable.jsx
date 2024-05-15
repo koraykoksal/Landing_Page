@@ -22,79 +22,79 @@ const ReportTable = ({landingData}) => {
     //   align: "center",
     //   flex: 1,
     // },
-    {
-      field: "actions",
-      headerName: "Aksiyon",
-      minWidth: 120,
-      headerAlign: "center",
-      align: "center",
-      flex: 1,
-      // renderCell: ({
-      //   id,
-      //   row: {
-      //     name,
-      //     surname,
-      //     phone,
-      //     email,
-      //     topic,
-      //     detail,
-      //     datetime,
-      //     actionType,
-      //     actionResult,
-      //     location
+    // {
+    //   field: "actions",
+    //   headerName: "Aksiyon",
+    //   minWidth: 120,
+    //   headerAlign: "center",
+    //   align: "center",
+    //   flex: 1,
+    //   // renderCell: ({
+    //   //   id,
+    //   //   row: {
+    //   //     name,
+    //   //     surname,
+    //   //     phone,
+    //   //     email,
+    //   //     topic,
+    //   //     detail,
+    //   //     datetime,
+    //   //     actionType,
+    //   //     actionResult,
+    //   //     location
 
-      //   }
-      // }) => {
-      //   return [
-      //     <GridActionsCellItem
-      //       key={'edit'}
-      //       label='Edit'
-      //       icon={<MdEdit size={23} style={{ cursor: 'pointer', color: '#E8C872' }} onClick={() => {
-      //         handleOpen_action()
-      //         setInfo({
-      //           id,
-      //           name,
-      //           surname,
-      //           phone,
-      //           email,
-      //           topic,
-      //           detail,
-      //           datetime,
-      //           actionType,
-      //           actionResult,
-      //           location,
-      //           type: "tesekkur"
-      //         })
-      //       }} />}
+    //   //   }
+    //   // }) => {
+    //   //   return [
+    //   //     <GridActionsCellItem
+    //   //       key={'edit'}
+    //   //       label='Edit'
+    //   //       icon={<MdEdit size={23} style={{ cursor: 'pointer', color: '#E8C872' }} onClick={() => {
+    //   //         handleOpen_action()
+    //   //         setInfo({
+    //   //           id,
+    //   //           name,
+    //   //           surname,
+    //   //           phone,
+    //   //           email,
+    //   //           topic,
+    //   //           detail,
+    //   //           datetime,
+    //   //           actionType,
+    //   //           actionResult,
+    //   //           location,
+    //   //           type: "tesekkur"
+    //   //         })
+    //   //       }} />}
 
-      //     />,
+    //   //     />,
 
-      //     <GridActionsCellItem
-      //       key={'delete'}
-      //       label='Delete'
-      //       icon={<MdDeleteForever size={23} style={{ cursor: 'pointer', color: 'red' }} onClick={() => {
-      //         handleOpen_delete()
-      //         setInfo({
-      //           id,
-      //           name,
-      //           surname,
-      //           phone,
-      //           email,
-      //           topic,
-      //           detail,
-      //           datetime,
-      //           actionType,
-      //           actionResult,
-      //           location,
-      //           type: "tesekkur"
-      //         })
-      //       }} />}
+    //   //     <GridActionsCellItem
+    //   //       key={'delete'}
+    //   //       label='Delete'
+    //   //       icon={<MdDeleteForever size={23} style={{ cursor: 'pointer', color: 'red' }} onClick={() => {
+    //   //         handleOpen_delete()
+    //   //         setInfo({
+    //   //           id,
+    //   //           name,
+    //   //           surname,
+    //   //           phone,
+    //   //           email,
+    //   //           topic,
+    //   //           detail,
+    //   //           datetime,
+    //   //           actionType,
+    //   //           actionResult,
+    //   //           location,
+    //   //           type: "tesekkur"
+    //   //         })
+    //   //       }} />}
 
-      //     />
+    //   //     />
 
-      //   ]
-      // },
-    },
+    //   //   ]
+    //   // },
+    // },
     {
       field: "name",
       headerName: "Name Surname",
@@ -106,7 +106,7 @@ const ReportTable = ({landingData}) => {
     {
       field: "email",
       headerName: "Email",
-      minWidth: 150,
+      minWidth: 250,
       headerAlign: "center",
       align: "center",
       flex: 1,
@@ -146,6 +146,14 @@ const ReportTable = ({landingData}) => {
     {
       field: "company",
       headerName: "Company",
+      minWidth: 150,
+      headerAlign: "center",
+      align: "center",
+      flex: 1,
+    },
+    {
+      field: "emessage",
+      headerName: "E-Message",
       minWidth: 150,
       headerAlign: "center",
       align: "center",

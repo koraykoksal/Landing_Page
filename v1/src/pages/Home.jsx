@@ -1,7 +1,7 @@
 import { Autocomplete, InputAdornment, Chip, Box, Button, Card, CardContent, CardMedia, Container, FormControl, Modal, Select, TextField, Typography, InputLabel, MenuItem, Grid, Paper, FormControlLabel, Checkbox, FormLabel } from '@mui/material'
 import React from 'react'
 import { useState, useEffect } from 'react'
-import { fontStyle, homePageStyle, modalStyles } from '../styles/globalStlye'
+import { colors, fontStyle, homePageStyle, modalStyles } from '../styles/globalStlye'
 import landingImg from "../assets/img/landingImg.png"
 import bonnaLogo from "../assets/img/logobonna_b.png"
 import { countryInfo, jobType } from '../helper/data'
@@ -156,7 +156,7 @@ export const Home = () => {
               flexDirection: 'column',
               gap: 5,
               p: 3,
-              backgroundColor: '#D4B69C',
+              backgroundColor: colors.bonna,
               minHeight: '100%',
             }}
             component={'form'}

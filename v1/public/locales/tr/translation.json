@@ -6,7 +6,7 @@
         "back":"Geri"
     },
     "muiElements": {
-        "nameSurname": "İsim, Soy isim",
+        "nameSurname": "İsim Soyisim",
         "mail": "E-Mail",
         "phone": "Telefon",
         "country": "Ülke",
