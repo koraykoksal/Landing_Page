@@ -1,4 +1,8 @@
-
+import trFlag from "../assets/flags/turkey.png"
+import itFlag from "../assets/flags/italy.png"
+import frFlag from "../assets/flags/france.png"
+import esFlag from "../assets/flags/spain.png"
+import enFlag from "../assets/flags/united-kingdom.png"
 
 export const countryInfo = [
   { country: 'Afghanistan', code: 'AF', phone: '93' },
@@ -202,4 +206,32 @@ export const jobType = [
   { name: "f&b" },
   { name: "architect" },
   { name: "other" },
+]
+
+export const languages = [
+  {
+    title: "tr",
+    icon: trFlag
+  },
+  {
+    title: "en",
+    icon: enFlag
+  },
+  {
+    title: "it",
+    icon: itFlag
+  },
+
+  {
+    title: "es",
+    icon: esFlag
+  },
+
+  {
+    title: "fr",
+    icon: frFlag
+  },
+
+
+
 ]

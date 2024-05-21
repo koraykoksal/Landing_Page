@@ -11,10 +11,12 @@
         "phone":"Teléfono",
         "country":"País",
         "job":"Profesión",
+        "description":"Descripción",
         "company":"Nombre de la empresa",
         "btnText":"Contáctame",
-        "GDPR":"I have read and accept the GDPR policy.",
-        "subscription":"Acepto recibir mensajes electrónicos para estar informado sobre las campañas."
+        "GDPR":"He leído y acepto el formulario de privacidad.",
+        "subscription":"Acepto recibir mensajes electrónicos para estar informado sobre las campañas.",
+        "click":"Clic"
     },
     "jobs":{
         "businessowner":"Empresario",

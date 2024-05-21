@@ -1,4 +1,4 @@
-import { Autocomplete, InputAdornment, Chip, Box, Button, Card, CardContent, CardMedia, Container, FormControl, Modal, Select, TextField, Typography, InputLabel, MenuItem, Grid, Paper, FormControlLabel, Checkbox, FormLabel } from '@mui/material'
+import { Autocomplete, InputAdornment, Chip, Box, Button, Card, CardContent, CardMedia, Container, FormControl, Modal, Select, TextField, Typography, InputLabel, MenuItem, Grid, Paper, FormControlLabel, Checkbox, FormLabel, Menu, IconButton } from '@mui/material'
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { colors, fontStyle, homePageStyle, modalStyles } from '../styles/globalStlye'
@@ -9,7 +9,8 @@ import { useTranslation } from 'react-i18next';
 import GDPR from "../assets/docs/GDPR.pdf"
 import useAuthCall from '../hooks/useAuthCall'
 import { format } from "date-fns"
-
+import LanguageIcon from '@mui/icons-material/Language';
+import { languages } from '../helper/data'
 
 export const Home = () => {
 
@@ -20,6 +21,14 @@ export const Home = () => {
   const [phone, setPhone] = useState('');
   const [countryCode, setCountryCode] = useState('90');
   const currentDate = new Date()
+  const [selectedJobType, setSelectedJobType] = useState({
+    value: '',
+    index: -1
+  });
+
+  const ITEM_HEIGHT = 48;
+  const [anchorElLanguage, setAnchorElLanguage] = React.useState(null);
+
 
   const [info, setInfo] = useState({
     name: "",
@@ -29,6 +38,7 @@ export const Home = () => {
     email: "",
     jobtype: "",
     tel: "",
+    description: "",
     emessage: false,
     policy: false,
     datetime: format(currentDate, 'yyyy-MM-dd HH:mm')
@@ -52,6 +62,12 @@ export const Home = () => {
         [name]: value
       }));
     }
+
+    const selectedIndex = jobType.findIndex(item => item.name === e.target.value);
+    setSelectedJobType({
+      value: e.target.value,
+      index: selectedIndex
+    });
   }
 
 
@@ -125,6 +141,17 @@ export const Home = () => {
     })
   }
 
+  const changeLanguage = (language) => {
+    i18n.changeLanguage(language);
+  };
+
+  const handleOpenLanguageMenu = (event) => {
+    setAnchorElLanguage(event.currentTarget);
+  };
+
+  const handleCloseLanguageMenu = (event) => {
+    setAnchorElLanguage(null);
+  };
 
   return (
 
@@ -162,6 +189,53 @@ export const Home = () => {
             component={'form'}
             onSubmit={handleSubmit}
           >
+
+            <Box>
+
+              <LanguageIcon onClick={handleOpenLanguageMenu} cursor={'pointer'} />
+
+              <Menu
+                sx={{ mt: '45px' }}
+                id="menu-appbar"
+                anchorEl={anchorElLanguage}
+                anchorOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                open={Boolean(anchorElLanguage)}
+                onClose={handleCloseLanguageMenu}
+                PaperProps={{
+                  style: {
+                    maxHeight: ITEM_HEIGHT * 4.5,
+                    //   width: '10ch',
+                  },
+                }}
+              >
+                <Box onClick={handleCloseLanguageMenu} s sx={{ display: 'flex', flexDirection: 'column' }}>
+
+                  <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+
+                    {
+                      languages?.map((item, index) => (
+                        <IconButton
+                          key={index}
+                        >
+                          <img onClick={() => changeLanguage(item.title)} src={item.icon} alt="icon" style={{ width: 24, height: 24 }} />
+
+                        </IconButton>
+                      ))
+                    }
+                  </Box>
+
+                </Box>
+              </Menu>
+
+            </Box>
 
             <CardMedia
               component='img'
@@ -374,11 +448,33 @@ export const Home = () => {
                       sx={{ fontFamily: `${fontStyle.catamaran}`, fontSize: 14 }}
                     >
                       {t('jobs.' + item.name)}
+
                     </MenuItem>
                   ))
                 }
               </Select>
             </FormControl>
+
+            {
+              selectedJobType.index == '4' &&
+              <TextField
+                required
+                name='description'
+                id='description'
+                label={t('muiElements.description')}
+                type='text'
+                onChange={handleChange}
+                sx={{
+                  '& .MuiInputLabel-root': {
+                    fontFamily: `${fontStyle.catamaran}`,
+                  },
+                  '& .MuiInputBase-input': {
+                    fontFamily: `${fontStyle.catamaran}`,
+                  }
+                }}
+              />
+            }
+
 
             <TextField
               fullWidth
@@ -409,22 +505,23 @@ export const Home = () => {
 
 
                 <FormControlLabel
+
                   control={
                     <Checkbox required name="gilad" onChange={(e) => handleIsCheck(e, 'policy')} />
                   }
                   label={
-                    <FormLabel style={{ fontFamily: `${fontStyle.catamaran}`, fontSize: 13 }}>
+                    <span style={{ fontFamily: `${fontStyle.catamaran}`, fontSize: 13 }}>
                       <span
-                      style={{textDecoration:'underline',marginRight:5,fontWeight:700,cursor: 'pointer'}}
+                        style={{ textDecoration: 'underline', marginRight: 5, fontWeight: 700, cursor: 'pointer' }}
                         onClick={() => {
                           window.open(`${GDPR}`, '_blank')
                         }}
                       >
-                        Click
+                        {t('muiElements.click')}
                       </span>
 
                       {t('muiElements.GDPR')}
-                    </FormLabel>
+                    </span>
                   }
 
                 />
@@ -439,7 +536,7 @@ export const Home = () => {
                   <Checkbox name="gilad" onChange={(e) => handleIsCheck(e, 'emessage')} />
                 }
                 label={
-                  <FormLabel style={{ fontFamily: `${fontStyle.catamaran}`, fontSize: 13 }}> {t('muiElements.subscription')}</FormLabel>
+                  <span style={{ fontFamily: `${fontStyle.catamaran}`, fontSize: 13 }}> {t('muiElements.subscription')}</span>
                   // <Typography style={{ fontFamily: `${fontStyle.catamaran}`, fontSize: 12 }}>{t('muiElements.subscription')}</Typography>
                 }
 
@@ -450,7 +547,7 @@ export const Home = () => {
 
             <Button
               variant='contained'
-              sx={{ backgroundColor: 'black', fontFamily: 'Catamaran', letterSpacing: 2, textTransform:'none','&:hover': { backgroundColor: 'black' } }}
+              sx={{ backgroundColor: 'black', fontFamily: 'Catamaran', letterSpacing: 2, textTransform: 'none', '&:hover': { backgroundColor: 'black' } }}
               type='submit'
             >
               {t('muiElements.btnText')}

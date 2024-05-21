@@ -11,10 +11,12 @@
         "phone":"Telefono",
         "country":"Paese",
         "job":"Professione",
+        "description":"Descrizione",
         "company":"Nome azienda",
         "btnText":"Contattami",
         "GDPR":"Ho letto e accetto il modulo sulla privacy.",
-        "subscription":"Acconsento a ricevere, a mezzo mail, informazioni in merito alle attivita’ di Bonna."
+        "subscription":"Acconsento a ricevere, a mezzo mail, informazioni in merito alle attivita’ di Bonna.",
+        "click":"Cliccare"
     },
     "jobs":{
         "businessowner":"Proprietario di attività commerciale",

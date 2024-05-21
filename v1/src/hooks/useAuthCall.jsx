@@ -117,12 +117,25 @@ const useAuthCall = () => {
     }
 
 
+    //! firebase data silme
+    const removeFirebaseData = async (address, id) => {
+
+        try {
+            const db = getDatabase();
+            remove(ref(db, `${address}/${id}`))
+            toastSuccessNotify('Data Deleted ✅')
+        } catch (error) {
+            toastErrorNotify('No Delete Data ❌')
+        }
+    }
+
 
     return {
         login,
         logout,
         postFireDB,
-        getFireDB
+        getFireDB,
+        removeFirebaseData
     }
 }
 

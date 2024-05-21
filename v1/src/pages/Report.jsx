@@ -12,6 +12,7 @@ import useAuthCall from '../hooks/useAuthCall';
 import ReportTable from '../components/ReportTable';
 import { SlRefresh } from "react-icons/sl";
 import { HiOutlineSearch } from "react-icons/hi";
+import Delete_Modal from '../components/modal/Delete_Modal';
 
 const Report = () => {
 
@@ -22,6 +23,11 @@ const Report = () => {
     dateFrom: "",
     dateTo: ""
   })
+
+  const [open, setOpen] = useState(false)
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => { setOpen(false) }
+
 
   useEffect(() => {
     getFireDB("landing")
@@ -84,7 +90,8 @@ const Report = () => {
 
         </Box>
 
-        <ReportTable landingData={landingData} />
+        <ReportTable landingData={landingData} handleOpen={handleOpen} setInfo={setInfo}/>
+      <Delete_Modal open={open} handleClose={handleClose} info={info}/>
       </Box>
 
     </div>

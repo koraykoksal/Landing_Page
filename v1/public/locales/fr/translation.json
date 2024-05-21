@@ -11,10 +11,12 @@
         "phone":"Téléphone",
         "country":"Pays",
         "job":"Profession",
+        "description":"Description",
         "company":"Nom de l'entreprise",
         "btnText":"Contactez moi",
         "GDPR":"J'ai lu et j'accepte le formulaire de confidentialité.",
-        "subscription":"J'accepte de recevoir des messages électroniques pour être informé des campagnes."
+        "subscription":"J'accepte de recevoir des messages électroniques pour être informé des campagnes.",
+        "click":"Cliquer"
     },
     "jobs":{
         "businessowner":"Propriétaire d'entreprise",

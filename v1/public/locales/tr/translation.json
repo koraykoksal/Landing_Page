@@ -11,10 +11,12 @@
         "phone": "Telefon",
         "country": "Ülke",
         "job": "Meslek",
+        "description":"Açıklama",
         "company": "Şirket İsmi",
         "btnText": "Benimle İletişime Geçin",
         "GDPR": " KVKK politikasını okudum ve kabul ediyorum.",
-        "subscription": "Kampanyalardan haberdar olmak için elektronik iletileri almayı kabul ediyorum."
+        "subscription": "Kampanyalardan haberdar olmak için elektronik iletileri almayı kabul ediyorum.",
+        "click":"Tıkla"
     },
     "jobs": {
         "businessowner": "İşletme Sahibi",
