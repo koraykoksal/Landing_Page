@@ -61,13 +61,20 @@ export const Home = () => {
         ...prevInfo,
         [name]: value
       }));
+
+      // job seçeneği ile index kontrolü yap
+      // index 4 ise description textfiled göster
+      if(name == 'jobtype'){
+        const selectedIndex = jobType.findIndex(item => item.name === e.target.value);
+        setSelectedJobType({
+          value: e.target.value,
+          index: selectedIndex
+        });
+
+      }
     }
 
-    const selectedIndex = jobType.findIndex(item => item.name === e.target.value);
-    setSelectedJobType({
-      value: e.target.value,
-      index: selectedIndex
-    });
+   
   }
 
 
@@ -152,6 +159,8 @@ export const Home = () => {
   const handleCloseLanguageMenu = (event) => {
     setAnchorElLanguage(null);
   };
+
+
 
   return (
 
@@ -269,6 +278,7 @@ export const Home = () => {
               type='text'
               label={t('muiElements.nameSurname')}
               onChange={handleChange}
+              value={info.name}
               sx={{
                 '& .MuiInputLabel-root': {
                   fontFamily: `${fontStyle.catamaran}`,
@@ -286,6 +296,7 @@ export const Home = () => {
               id='email'
               type='email'
               label={t('muiElements.mail')}
+              value={info.email}
               onChange={handleChange}
               sx={{
                 '& .MuiInputLabel-root': {
@@ -463,6 +474,7 @@ export const Home = () => {
                 id='description'
                 label={t('muiElements.description')}
                 type='text'
+                value={info.description}
                 onChange={handleChange}
                 sx={{
                   '& .MuiInputLabel-root': {
