@@ -11,6 +11,8 @@ import useAuthCall from '../hooks/useAuthCall'
 import { format } from "date-fns"
 import LanguageIcon from '@mui/icons-material/Language';
 import { languages } from '../helper/data'
+import { GoChevronDown } from "react-icons/go";
+
 
 export const Home = () => {
 
@@ -64,7 +66,7 @@ export const Home = () => {
 
       // job seçeneği ile index kontrolü yap
       // index 4 ise description textfiled göster
-      if(name == 'jobtype'){
+      if (name == 'jobtype') {
         const selectedIndex = jobType.findIndex(item => item.name === e.target.value);
         setSelectedJobType({
           value: e.target.value,
@@ -74,7 +76,7 @@ export const Home = () => {
       }
     }
 
-   
+
   }
 
 
@@ -178,7 +180,7 @@ export const Home = () => {
               sx={{
                 objectFit: 'cover',
                 height: '100%',
-                width: '100%'
+                width: '100%',
               }}
             />
           </Box>
@@ -199,9 +201,35 @@ export const Home = () => {
             onSubmit={handleSubmit}
           >
 
-            <Box>
 
-              <LanguageIcon onClick={handleOpenLanguageMenu} cursor={'pointer'} />
+
+
+            <Box sx={{ display: 'flex', alignItems: 'center' }}>
+
+              <Grid
+                sx={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  cursor: 'pointer'
+                }}
+                onClick={handleOpenLanguageMenu}
+              >
+
+                <Typography
+                  sx={{ cursor: 'pointer' }}
+                  variant='caption'
+                  fontSize={16}
+                >
+                  {i18n.resolvedLanguage}
+                </Typography>
+                
+
+                <GoChevronDown size={18} />
+              </Grid>
+
+              {/* <LanguageIcon onClick={handleOpenLanguageMenu} cursor={'pointer'} /> */}
+
 
               <Menu
                 sx={{ mt: '45px' }}
@@ -234,7 +262,13 @@ export const Home = () => {
                         <IconButton
                           key={index}
                         >
-                          <img onClick={() => changeLanguage(item.title)} src={item.icon} alt="icon" style={{ width: 24, height: 24 }} />
+                          <img onClick={() =>
+                            changeLanguage(item.title)
+                          }
+                            src={item.icon}
+                            alt="icon"
+                            style={{ width: 24, height: 24 }}
+                          />
 
                         </IconButton>
                       ))
