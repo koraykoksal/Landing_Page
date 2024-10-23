@@ -1,0 +1,30 @@
+{
+    "text": {
+        "txt1":"Con la nostra passione per la gastronomia, portiamo nel settore alimentare e delle bevande la qualità eccellente, l'eleganza e i design unici di Bonna.",
+        "txt2":"Siamo entusiasti di collaborare con voi.",
+        "success":"Successo",
+        "back":"Tornare",
+        "thanks":"GRAZIE",
+        "thanksMessage":"Abbiamo ricevuto la tua richiesta, ti contatteremo il prima possibile."
+    },
+    "muiElements":{
+        "nameSurname":"Nome Cognone",
+        "mail":"E-mail",
+        "phone":"Telefono",
+        "country":"Paese",
+        "job":"Professione",
+        "description":"Descrizione",
+        "company":"Nome azienda",
+        "btnText":"Contattami",
+        "GDPR":"Ho letto e accetto il modulo sulla privacy.",
+        "subscription":"Acconsento a ricevere, a mezzo mail, informazioni in merito alle attivita’ di Bonna.",
+        "click":"Cliccare"
+    },
+    "jobs":{
+        "businessowner":"Proprietario di attività commerciale",
+        "chef":"Chef",
+        "f&b":"F&B",
+        "architect":"Architetto",
+        "other":"Altro "
+    }
+}

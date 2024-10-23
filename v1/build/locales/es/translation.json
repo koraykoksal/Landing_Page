@@ -1,0 +1,30 @@
+{
+    "text": {
+        "txt1":"Con nuestra pasión por la gastronomía, aportamos la mejor calidad, elegancia y diseños únicos de Bonna al sector de la restauración.",
+        "txt2":"Estamos encantados de colaborar con usted.",
+        "success":"Éxito",
+        "back":"Volver",
+        "thanks":"GRACIAS",
+        "thanksMessage":"Hemos recibido su solicitud, nos pondremos en contacto con usted lo antes posible"
+    },
+    "muiElements":{
+        "nameSurname":"Nombre Apellidos",
+        "mail":"E-mail",
+        "phone":"Teléfono",
+        "country":"País",
+        "job":"Profesión",
+        "description":"Descripción",
+        "company":"Nombre de la empresa",
+        "btnText":"Contáctame",
+        "GDPR":"He leído y acepto el formulario de privacidad.",
+        "subscription":"Acepto recibir mensajes electrónicos para estar informado sobre las campañas.",
+        "click":"Clic"
+    },
+    "jobs":{
+        "businessowner":"Empresario",
+        "chef":"Cocinero",
+        "f&b":"F&B",
+        "architect":"Arquitecto",
+        "other":"Otro"
+    }
+}

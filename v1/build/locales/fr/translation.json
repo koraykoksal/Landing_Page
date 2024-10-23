@@ -1,0 +1,30 @@
+{
+    "text": {
+        "txt1":"Avec notre passion pour la gastronomie, nous ammenons la qualité de Bonna, ses designs élégants et uniques à l'industrie de l'alimentation et des boissons.",
+        "txt2":"Nous sommes ravis de collaborer avec vous.",
+        "success":"Succès",
+        "back":"Retour",
+        "thanks":"MERCI",
+        "thanksMessage":"Nous avons reçu votre demande, nous vous contacterons dès que possible."
+    },
+    "muiElements":{
+        "nameSurname":"Nom et prénom",
+        "mail":"Courriel",
+        "phone":"Téléphone",
+        "country":"Pays",
+        "job":"Profession",
+        "description":"Description",
+        "company":"Nom de l'entreprise",
+        "btnText":"Contactez moi",
+        "GDPR":"J'ai lu et j'accepte le formulaire de confidentialité.",
+        "subscription":"J'accepte de recevoir des messages électroniques pour être informé des campagnes.",
+        "click":"Cliquer"
+    },
+    "jobs":{
+        "businessowner":"Propriétaire d'entreprise",
+        "chef":"Chef cuisinier",
+        "f&b":"F&B",
+        "architect":"Architecte",
+        "other":"Autre "
+    }
+}

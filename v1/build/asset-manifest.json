@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2ba5a109.css",
+    "main.js": "/static/js/main.e2ac6fa8.js",
+    "static/media/pattern1.jpg": "/static/media/pattern1.08284076b96c62186d54.jpg",
+    "static/media/TesukkurImg.png": "/static/media/TesukkurImg.0ca6470e8537b31600b0.png",
+    "static/media/landingImg.png": "/static/media/landingImg.c520060c3057eb6d1df1.png",
+    "static/media/GDPR.pdf": "/static/media/GDPR.72880974defc20385f7b.pdf",
+    "static/media/logobonna_b.png": "/static/media/logobonna_b.400d9be2a40011d88537.png",
+    "static/media/logobonna_w.png": "/static/media/logobonna_w.13dbfffab19d4d95d459.png",
+    "static/media/404.png": "/static/media/404.a701b2f217e6d7dcca54.png",
+    "static/media/lock.png": "/static/media/lock.d009ed9134b79956722d.png",
+    "static/media/turkey.png": "/static/media/turkey.6f8f999abbc25de0beb5.png",
+    "index.html": "/index.html",
+    "static/media/getFetch.cjs": "/static/media/getFetch.c4cca45e22bc1b2c7d0d.cjs",
+    "main.2ba5a109.css.map": "/static/css/main.2ba5a109.css.map",
+    "main.e2ac6fa8.js.map": "/static/js/main.e2ac6fa8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2ba5a109.css",
+    "static/js/main.e2ac6fa8.js"
+  ]
+}

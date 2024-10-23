@@ -1,0 +1,30 @@
+{
+    "text": {
+        "txt1":"With our passion for gastronomy, we offer the highest quality, stylish and unique designs to the taste of industry professionals.",
+        "txt2":"We look forward to collaborating with you.",
+        "success":"Success",
+        "back":"Back",
+        "thanks":"THANKS",
+        "thanksMessage":"We have received your request, we will contact you as soon as possible."
+    },
+    "muiElements":{
+        "nameSurname":"Name Surname",
+        "mail":"Mail",
+        "phone":"Phone",
+        "country":"Country",
+        "job":"Job",
+        "description":"Description",
+        "company":"Company",
+        "btnText":"Contact Us",
+        "GDPR":"I have read and accept the GDPR policy.",
+        "subscription":"Electronic messages to be informed about campaigns I agree to take it.",
+        "click":"Click"
+    },
+    "jobs":{
+        "businessowner":"Business Owner",
+        "chef":"Chef",
+        "f&b":"F&B",
+        "architect":"Architect",
+        "other":"Other"
+    }
+}
