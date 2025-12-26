@@ -13,6 +13,10 @@ export const colors = {
   navbarBgColor: '#F5F5FF',
   homePageBgColor: '#F5F5FF',
   bonna:'#D4B69C'
+
+
+
+  // ergreerger
 }
 
 
